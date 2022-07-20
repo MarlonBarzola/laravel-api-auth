@@ -15,7 +15,7 @@ class PetController extends Controller
     }
 
     public function index() {
-        $pets = Pet::where('id', Auth::user()->id)->get();
+        $pets = Pet::where('user_id', Auth::user()->id)->get();
         return response()->json(['pets' =>  $pets], 200);
     }
 

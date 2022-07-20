@@ -42,5 +42,12 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     $router->put('pet/{id}', 'PetController@update');
     $router->delete('pet/{id}/', 'PetController@destroy');
 
+    //Appointments
+    $router->get('appointments', 'AppointmentController@index');
+    $router->post('appointment/create', 'AppointmentController@create');
+    $router->get('appointment/{id}', 'AppointmentController@show');
+    $router->put('appointment/{id}', 'AppointmentController@update');
+    $router->delete('appointment/{id}/', 'AppointmentController@destroy');
+
 });
 
