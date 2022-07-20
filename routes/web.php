@@ -34,5 +34,13 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     //get one user by id
     $router->get('users/{id}', 'UserController@singleUser');
     $router->get('users', 'UserController@allUsers');
+    
+    //Pets
+    $router->get('pets', 'PetController@index');
+    $router->post('pet/create', 'PetController@create');
+    $router->get('pet/{id}', 'PetController@show');
+    $router->put('pet/{id}', 'PetController@update');
+    $router->delete('pet/{id}/', 'PetController@destroy');
+
 });
 
